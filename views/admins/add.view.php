@@ -1,4 +1,11 @@
+<?php
+if(!isset($_SESSION['admin_name'])){
+    header("Location: /login");
+    die();
+}
+?>
 <?php require base_path("views/admins/partials/header.php"); ?>
+
 
 <?php if(isset($errors['add_new_admin'])): ?>
     <div class="col-sm-6 offset-sm-3 border p-3 mt-3">
@@ -7,11 +14,11 @@
 <?php endif;?>
 
 
-<?php if(isset($success_message) && $success_message !=''){  ?>
+<?php if(isset($success_message) && $success_message !=''):  ?>
     <div class="col-sm-6 offset-sm-3 border p-3 mt-3">
         <h3 class="alert alert-success text-center"> <?php echo $success_message; ?>  </h3>
     </div>
-<?php }?>
+<?php endif;?>
 
 
     <div class="col-sm-6 offset-sm-3 border p-3">
