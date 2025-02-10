@@ -4,7 +4,7 @@ if(!isset($_SESSION['admin_name'])){
     die();
 }
 ?>
-<?php require base_path("views/admins/partials/header.php"); ?>
+<?php require base_path("views/partials/header.php"); ?>
 
 
 <?php if(isset($errors['add_new_admin'])): ?>
@@ -53,4 +53,4 @@ if(!isset($_SESSION['admin_name'])){
 
 
 
-<?php require base_path("views/admins/partials/footer.php");?>
+<?php require base_path("views/partials/footer.php");?>

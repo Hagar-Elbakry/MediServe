@@ -1,4 +1,4 @@
 <?php
 
-require base_path("views/admins/partials/header.php");
-require base_path("views/admins/partials/footer.php");
+require base_path("views/partials/header.php");
+require base_path("views/partials/footer.php");

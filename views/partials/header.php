@@ -32,8 +32,8 @@
                     Cities
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Add</a>
-                    <a class="dropdown-item" href="#">View All</a>
+                    <a class="dropdown-item" href="/city">Add</a>
+                    <a class="dropdown-item" href="/show">View All</a>
                 </div>
             </li>
 

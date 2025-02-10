@@ -5,6 +5,7 @@ class Validator
 {
 
     public static function isEmpty($value) {
+        $value = trim($value);
         return empty($value);
     }
 
