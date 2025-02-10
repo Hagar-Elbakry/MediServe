@@ -16,7 +16,7 @@
                 <td class="text-center"> <?php echo $city['city_name'] ?> </td>
 
                 <td class="text-center">
-                    <a href="#" class="btn btn-info">Edit</a>
+                    <a href="/edit?id=<?php echo $city['city_id']?>" class="btn btn-info">Edit</a>
                     <a href="#" class="btn btn-danger delete" data-field="city_id" data-id="" data-table="cities" >Delete</a>
                 </td>
             </tr>
