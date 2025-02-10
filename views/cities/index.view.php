@@ -5,8 +5,8 @@
     <table class="table table-dark table-bordered">
         <thead>
         <tr class="text-center">
-            <th scope="col">Name</th>
-            <th scope="col">Action</th>
+            <th scope="col" style="width: 50%">Name</th>
+            <th scope="col" style="width: 50%">Action</th>
 
         </tr>
         </thead>
@@ -17,7 +17,12 @@
 
                 <td class="text-center">
                     <a href="/edit?id=<?php echo $city['city_id']?>" class="btn btn-info">Edit</a>
-                    <a href="#" class="btn btn-danger delete" data-field="city_id" data-id="" data-table="cities" >Delete</a>
+                    <form method="post" action="/delete" class="d-inline">
+                        <input type="hidden" name="city_id" value="<?php echo $city['city_id']?>">
+                        <input type="hidden" name="__method" value="DELETE">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+
                 </td>
             </tr>
             <?php endforeach;?>
