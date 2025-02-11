@@ -21,20 +21,31 @@
         <div class="row">
             <div class="col-sm-12">
 
+                <?php if(isset($errors['add_order'])): ?>
+                    <div class="col-sm-6 offset-sm-3 border p-3 mt-3">
+                        <h3 class="alert alert-danger text-center"> <?php foreach ($errors as $error):echo $error; endforeach; ?>  </h3>
+                    </div>
+                <?php endif;?>
 
-                <form class="row" method="POST" action="" class="mt-5" >
+
+                <?php if(isset($success_message) && $success_message !=''):  ?>
+                    <div class="col-sm-6 offset-sm-3 border p-3 mt-3">
+                        <h3 class="alert alert-success text-center"> <?php echo $success_message; ?>  </h3>
+                    </div>
+                <?php endif;?>
+
+                <form class="row" method="POST" action="/" class="mt-5" >
 
                     <div class="col-sm-6 ">
                         <div class="form-group mt-3">
 
                             <label for="serv" class="font-1">Choose Service</label>
-                            <select name="service" id="serv" class="form-control font-1">
-                                <?php //$data = getRows('services');  $x=1; ?>
-                                <?php //foreach($data as $row){   ?>
-                                    <option value="<?php //echo $row['serv_id']; ?>">
-                                        <?php //echo $row['serv_name']; ?>
+                            <select name="service_id" id="serv" class="form-control font-1">
+                                <?php foreach($services as $service):   ?>
+                                    <option value="<?php echo $service['service_id']; ?>">
+                                        <?php echo $service['service_name']; ?>
                                     </option>
-                                <?php //} ?>
+                                <?php endforeach; ?>
                             </select>
 
                         </div>
@@ -45,7 +56,7 @@
                         <div class="form-group mt-3">
 
                             <label for="serv" class="font-1">Choose City</label>
-                            <select name="city" id="serv" class="form-control font-1">
+                            <select name="city_id" id="serv" class="form-control font-1">
                                 <?php foreach($cities as $city):?>
                                     <option value="<?php echo $city['city_id']; ?>">
                                         <?php echo $city['city_name']; ?>
@@ -70,7 +81,7 @@
                         <div class="form-group ">
 
                             <label for="serv" class="font-1">Type Your Email</label>
-                            <input type="email" name="email"  class="form-control font-1 bg-base">
+                            <input type="text" name="email"  class="form-control font-1 bg-base">
 
                         </div>
                     </div>
@@ -79,22 +90,13 @@
                         <div class="form-group ">
 
                             <label for="serv" class="font-1">Type Your Mobile *</label>
-                            <input type="text" name="mobile"  class="form-control font-1 bg-base">
+                            <input type="text" name="phone"  class="form-control font-1 bg-base">
 
                         </div>
                     </div>
 
 
 
-
-                    <div class="col-sm-12">
-                        <div class="form-group">
-
-                            <label for="serv" class="font-1">Type Notes</label>
-                            <textarea name="notes"  class="form-control font-1 bg-base"  rows="5"></textarea>
-
-                        </div>
-                    </div>
 
 
 

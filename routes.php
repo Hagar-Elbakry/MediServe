@@ -15,6 +15,7 @@ $router->get('/edit' , 'controllers/cities/edit.php');
 $router->patch('/update', 'controllers/cities/update.php');
 $router->delete('/delete', 'controllers/cities/delete.php');
 $router->get('/', 'controllers/index.php');
+$router->post('/', 'controllers/index.php');
 $router->get('/service', 'controllers/services/add.php');
 $router->post('/service', 'controllers/services/add.php');
 $router->get('/services', 'controllers/services/index.php');

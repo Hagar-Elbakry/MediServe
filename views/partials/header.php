@@ -52,7 +52,7 @@
                     Orders
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">View All</a>
+                    <a class="dropdown-item" href="/orders">View All</a>
                 </div>
             </li>
 
