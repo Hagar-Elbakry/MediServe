@@ -29,5 +29,5 @@ $db->query("UPDATE cities SET city_name = :name WHERE city_id = :id", [
     ':id' => $_POST['city_id']
 ]);
 
-header("Location: /show");
+header("Location: /cities");
 die();

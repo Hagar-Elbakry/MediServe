@@ -1,6 +1,6 @@
 <?php
     if(isset($_SESSION['admin_name'])){
-        header("Location: /add");
+        header("Location: /admins");
         die();
     }
 ?>

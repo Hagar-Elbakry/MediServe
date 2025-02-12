@@ -4,6 +4,7 @@ if(!isset($_SESSION['admin_name'])){
     die();
 }
 ?>
+
 <?php require base_path("views/partials/header.php"); ?>
 
 
@@ -23,7 +24,7 @@ if(!isset($_SESSION['admin_name'])){
 
     <div class="col-sm-6 offset-sm-3 border p-3">
         <h3 class="text-center p-3 bg-primary text-white">Add New Admin</h3>
-        <form method="post" action="/add">
+        <form method="post" action="/add-admin">
             <div class="form-group">
                 <label >Name </label>
                 <input type="text" name="name" class="form-control" >

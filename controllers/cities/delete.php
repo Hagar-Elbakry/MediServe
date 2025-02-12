@@ -10,6 +10,6 @@ $result = $db->query("DELETE FROM cities WHERE city_id = :id", [
 ]);
 
 if($result) {
-    header("Location: /show");
+    header("Location: /cities");
     die();
 }

@@ -1,4 +1,10 @@
 <?php require base_path("views/partials/header.php");?>
+<?php
+if(!isset($_SESSION['admin_name'])){
+    header("Location: /login");
+    die();
+}
+?>
 
     <div class="col-sm-12">
         <h3 class="text-center p-3 bg-primary text-white">View All Admins</h3>

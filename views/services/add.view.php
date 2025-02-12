@@ -1,4 +1,10 @@
 <?php require base_path("views/partials/header.php")?>
+<?php
+if(!isset($_SESSION['admin_name'])){
+    header("Location: /login");
+    die();
+}
+?>
 
 <?php if(isset($errors['add_service'])): ?>
     <div class="col-sm-6 offset-sm-3 border p-3 mt-3">
@@ -16,7 +22,7 @@
 
 <div class="col-sm-6 offset-sm-3 border p-3">
     <h3 class="text-center p-3 bg-primary text-white">Add New Service</h3>
-    <form method="post" action="/service">
+    <form method="post" action="/add-service">
         <div class="form-group">
             <label >Name Of Service</label>
             <input type="text" name="name" class="form-control" >

@@ -1,4 +1,10 @@
 <?php require base_path("views/partials/header.php")?>
+<?php
+if(!isset($_SESSION['admin_name'])){
+    header("Location: /login");
+    die();
+}
+?>
 
 <?php if(isset($errors['update_service'])): ?>
     <div class="col-sm-6 offset-sm-3 border p-3 mt-3">
