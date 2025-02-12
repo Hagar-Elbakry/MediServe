@@ -31,8 +31,6 @@ if(!isset($_SESSION['admin_name'])){
                 <?php
                     $cityRow = $db->query("SELECT * FROM cities WHERE city_id = :id", [":id" => $order['city_id']])->fetch();
                     $serviceRow = $db->query("SELECT * FROM services WHERE service_id = :id", [":id" => $order['service_id']])->fetch();
-//                $rowCity = getRow('city_id',$row['order_city_id'],'cities');
-//                $rowService = getRow('serv_id',$row['order_serv_id'],'services');
                 ?>
                 <td class="text-center"><?php echo  $serviceRow['service_name'] ?></td>
                 <td class="text-center"><?php echo $cityRow['city_name'] ?></td>
