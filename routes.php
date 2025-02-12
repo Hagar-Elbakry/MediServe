@@ -23,3 +23,5 @@ $router->get('/services', 'controllers/services/index.php');
 $router->get('/edit-service' , 'controllers/services/edit.php');
 $router->patch('/update-service', 'controllers/services/update.php');
 $router->delete('/delete-service', 'controllers/services/delete.php');
+$router->get('/orders', 'controllers/orders/index.php');
+$router->delete('/delete-order', 'controllers/orders/delete.php');
